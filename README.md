@@ -231,3 +231,33 @@ MIT License
 **版本**: 1.0.0  
 **最后更新**: 2026-03-18  
 **作者**: kuyhii
+
+## 🔧 安装后配置
+
+### 第 1 步：配置 Bot Tokens
+
+编辑 `config/bot-matrix.json`，将 `YOUR_BOT_TOKEN_ID` 替换为你的 Bot Token：
+
+```json
+{
+  "tokenId": "你的 Bot Token ID"
+}
+```
+
+### 第 2 步：创建 Telegram Bots
+
+通过 @BotFather 创建 10 个 Bot：
+1. `/newbot` 创建新 Bot
+2. 设置 Bot 名称和用户名
+3. 复制 Bot Token ID
+4. 填入 `config/bot-matrix.json`
+
+### 第 3 步：生成记忆层
+
+```bash
+node scripts/setup-bots.js
+```
+
+### 第 4 步：配置 OpenClaw
+
+编辑 `MEMORY.md`，更新 Bot 矩阵信息。
