@@ -1,0 +1,119 @@
+{
+  "version": "1.0.0",
+  "mode": "single-instance-roleplay",
+  "entryBot": "zhongguan",
+  "entryHandle": "@Zhongguanzhabot",
+  "bots": [
+    {
+      "id": "zhongguan",
+      "role": "总管/协调者",
+      "handle": "@Zhongguanzhabot",
+      "tokenId": "8684783881",
+      "status": "active",
+      "memoryFile": "memory/bot-zhongguan.md",
+      "l0File": "memory/layers/bot-zhongguan.l0.json",
+      "l1File": "memory/layers/bot-zhongguan.l1.json"
+    },
+    {
+      "id": "daima",
+      "role": "代码专家",
+      "handle": "@Daimazujbot",
+      "tokenId": "8745777039",
+      "status": "active",
+      "memoryFile": "memory/bot-daima.md",
+      "l0File": "memory/layers/bot-daima.l0.json",
+      "l1File": "memory/layers/bot-daima.l1.json"
+    },
+    {
+      "id": "yunyin",
+      "role": "运营专家",
+      "handle": "@Yunyinhjibot",
+      "tokenId": "8602144010",
+      "status": "active",
+      "memoryFile": "memory/bot-yunyin.md",
+      "l0File": "memory/layers/bot-yunyin.l0.json",
+      "l1File": "memory/layers/bot-yunyin.l1.json"
+    },
+    {
+      "id": "anquan",
+      "role": "安全审计师",
+      "handle": "@Anquansjbot",
+      "tokenId": "8734523568",
+      "status": "active",
+      "memoryFile": "memory/bot-anquan.md",
+      "l0File": "memory/layers/bot-anquan.l0.json",
+      "l1File": "memory/layers/bot-anquan.l1.json"
+    },
+    {
+      "id": "tixing",
+      "role": "提醒助手",
+      "handle": "@Tixingtongzbot",
+      "tokenId": "8224484616",
+      "status": "active",
+      "memoryFile": "memory/bot-tixing.md",
+      "l0File": "memory/layers/bot-tixing.l0.json",
+      "l1File": "memory/layers/bot-tixing.l1.json"
+    },
+    {
+      "id": "zhisguan",
+      "role": "知识管家",
+      "handle": "@Zhisguanlbot",
+      "tokenId": "8769173565",
+      "status": "active",
+      "memoryFile": "memory/bot-zhisguan.md",
+      "l0File": "memory/layers/bot-zhisguan.l0.json",
+      "l1File": "memory/layers/bot-zhisguan.l1.json"
+    },
+    {
+      "id": "wenjian",
+      "role": "文件专家",
+      "handle": "@Wenjianclibot",
+      "tokenId": "8724865823",
+      "status": "active",
+      "memoryFile": "memory/bot-wenjian.md",
+      "l0File": "memory/layers/bot-wenjian.l0.json",
+      "l1File": "memory/layers/bot-wenjian.l1.json"
+    },
+    {
+      "id": "zidonghua",
+      "role": "自动化专家",
+      "handle": "@Zidonghuabot",
+      "tokenId": "TBD",
+      "status": "pending",
+      "memoryFile": "memory/bot-zidonghua.md",
+      "l0File": "memory/layers/bot-zidonghua.l0.json",
+      "l1File": "memory/layers/bot-zidonghua.l1.json"
+    },
+    {
+      "id": "loudongku",
+      "role": "漏洞扫描师",
+      "handle": "@Loudongkubot",
+      "tokenId": "TBD",
+      "status": "pending",
+      "memoryFile": "memory/bot-loudongku.md",
+      "l0File": "memory/layers/bot-loudongku.l0.json",
+      "l1File": "memory/layers/bot-loudongku.l1.json"
+    },
+    {
+      "id": "falvhegui",
+      "role": "法律合规官",
+      "handle": "@Falvheguibot",
+      "tokenId": "TBD",
+      "status": "pending",
+      "memoryFile": "memory/bot-falvhegui.md",
+      "l0File": "memory/layers/bot-falvhegui.l0.json",
+      "l1File": "memory/layers/bot-falvhegui.l1.json"
+    }
+  ],
+  "routing": {
+    "strategy": "keyword-matching",
+    "fallback": "zhongguan",
+    "minScore": 0.3
+  },
+  "memory": {
+    "shared": "MEMORY.md",
+    "independent": "memory/bot-*.md",
+    "daily": "memory/YYYY-MM-DD.md",
+    "layers": "memory/layers/"
+  }
+}

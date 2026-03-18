@@ -1,0 +1,219 @@
+{
+  "version": "1.0.0",
+  "strategy": "keyword-matching-with-scoring",
+  "rules": {
+    "zhongguan": {
+      "priority": [
+        "总管",
+        "协调",
+        "管理"
+      ],
+      "exclude": [
+        "代码",
+        "安全",
+        "运营",
+        "提醒",
+        "知识",
+        "文件"
+      ],
+      "allKeywords": [
+        "协调",
+        "路由",
+        "汇总",
+        "管理",
+        "系统",
+        "配置"
+      ],
+      "fallback": null
+    },
+    "daima": {
+      "priority": [
+        "代码",
+        "GitHub",
+        "PR",
+        "issue"
+      ],
+      "exclude": [
+        "安全",
+        "运营",
+        "提醒",
+        "法律"
+      ],
+      "allKeywords": [
+        "代码",
+        "GitHub",
+        "PR",
+        "issue",
+        "脚本",
+        "编程",
+        "开发"
+      ],
+      "fallback": "zhongguan"
+    },
+    "yunyin": {
+      "priority": [
+        "运营",
+        "数据",
+        "分析"
+      ],
+      "exclude": [
+        "代码",
+        "安全",
+        "法律"
+      ],
+      "allKeywords": [
+        "运营",
+        "数据",
+        "分析",
+        "报告",
+        "内容",
+        "用户"
+      ],
+      "fallback": "zhongguan"
+    },
+    "anquan": {
+      "priority": [
+        "安全",
+        "审计",
+        "风险"
+      ],
+      "exclude": [
+        "代码",
+        "运营",
+        "提醒"
+      ],
+      "allKeywords": [
+        "安全",
+        "审计",
+        "风险",
+        "检查",
+        "审查",
+        "漏洞"
+      ],
+      "fallback": "zhongguan"
+    },
+    "tixing": {
+      "priority": [
+        "提醒",
+        "定时",
+        "闹钟"
+      ],
+      "exclude": [
+        "代码",
+        "安全",
+        "法律"
+      ],
+      "allKeywords": [
+        "提醒",
+        "定时",
+        "闹钟",
+        "通知",
+        "督促",
+        "Cron"
+      ],
+      "fallback": "zhongguan"
+    },
+    "zhisguan": {
+      "priority": [
+        "知识",
+        "搜索",
+        "检索"
+      ],
+      "exclude": [
+        "代码",
+        "安全",
+        "文件"
+      ],
+      "allKeywords": [
+        "知识",
+        "搜索",
+        "查找",
+        "文档",
+        "检索",
+        "问答"
+      ],
+      "fallback": "zhongguan"
+    },
+    "wenjian": {
+      "priority": [
+        "文件",
+        "转换",
+        "格式"
+      ],
+      "exclude": [
+        "代码",
+        "安全",
+        "知识"
+      ],
+      "allKeywords": [
+        "文件",
+        "转换",
+        "格式",
+        "图片",
+        "PDF",
+        "文档"
+      ],
+      "fallback": "zhongguan"
+    },
+    "zidonghua": {
+      "priority": [
+        "自动化",
+        "工作流",
+        "Cron"
+      ],
+      "exclude": [
+        "代码",
+        "安全"
+      ],
+      "allKeywords": [
+        "自动化",
+        "工作流",
+        "Cron",
+        "调度",
+        "脚本"
+      ],
+      "fallback": "zhongguan"
+    },
+    "loudongku": {
+      "priority": [
+        "漏洞",
+        "扫描",
+        "CVE"
+      ],
+      "exclude": [
+        "代码",
+        "运营"
+      ],
+      "allKeywords": [
+        "漏洞",
+        "扫描",
+        "CVE",
+        "渗透",
+        "检测"
+      ],
+      "fallback": "zhongguan"
+    },
+    "falvhegui": {
+      "priority": [
+        "法律",
+        "合同",
+        "合规"
+      ],
+      "exclude": [
+        "代码",
+        "运营",
+        "安全"
+      ],
+      "allKeywords": [
+        "法律",
+        "合同",
+        "合规",
+        "条款",
+        "协议",
+        "法规"
+      ],
+      "fallback": "zhongguan"
+    }
+  },
+  "defaultBot": "zhongguan"
+}
