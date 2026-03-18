@@ -50,7 +50,7 @@ gh auth login
 
 # 创建并推送仓库
 cd /root/.openclaw/workspace/skills/bot-collective
-gh repo create kuyhii/bot-collective-skill --public --source=. --remote=origin --push
+gh repo create [YourUsername]/bot-collective-skill --public --source=. --remote=origin --push
 ```
 
 ## 创建 GitHub Release

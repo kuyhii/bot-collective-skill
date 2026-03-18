@@ -1,219 +1,88 @@
 {
   "version": "1.0.0",
   "strategy": "keyword-matching-with-scoring",
+  "defaultBot": "zhongguan",
+  "minScore": 0.3,
   "rules": {
     "zhongguan": {
-      "priority": [
-        "总管",
-        "协调",
-        "管理"
-      ],
-      "exclude": [
-        "代码",
-        "安全",
-        "运营",
-        "提醒",
-        "知识",
-        "文件"
-      ],
-      "allKeywords": [
-        "协调",
-        "路由",
-        "汇总",
-        "管理",
-        "系统",
-        "配置"
-      ],
-      "fallback": null
+      "priority": ["manager", "coordinate", "admin", "route", "summary"],
+      "exclude": ["code", "security", "ops", "reminder", "knowledge", "file"],
+      "allKeywords": ["coordinate", "route", "summary", "manage", "system", "config", "manager", "task", "distribute"],
+      "fallback": null,
+      "isDefault": true
     },
     "daima": {
-      "priority": [
-        "代码",
-        "GitHub",
-        "PR",
-        "issue"
-      ],
-      "exclude": [
-        "安全",
-        "运营",
-        "提醒",
-        "法律"
-      ],
-      "allKeywords": [
-        "代码",
-        "GitHub",
-        "PR",
-        "issue",
-        "脚本",
-        "编程",
-        "开发"
-      ],
-      "fallback": "zhongguan"
+      "priority": ["code", "github", "pr", "issue", "script", "programming"],
+      "exclude": ["security", "ops", "reminder"],
+      "allKeywords": ["code", "github", "pr", "issue", "script", "programming", "development", "review", "mcp", "skill"],
+      "fallback": "zhongguan",
+      "isDefault": false
     },
     "yunyin": {
-      "priority": [
-        "运营",
-        "数据",
-        "分析"
-      ],
-      "exclude": [
-        "代码",
-        "安全",
-        "法律"
-      ],
-      "allKeywords": [
-        "运营",
-        "数据",
-        "分析",
-        "报告",
-        "内容",
-        "用户"
-      ],
-      "fallback": "zhongguan"
+      "priority": ["operations", "data", "analysis", "report"],
+      "exclude": ["code", "security"],
+      "allKeywords": ["operations", "data", "analysis", "report", "content", "user", "statistics", "trend", "kpi"],
+      "fallback": "zhongguan",
+      "isDefault": false
     },
     "anquan": {
-      "priority": [
-        "安全",
-        "审计",
-        "风险"
-      ],
-      "exclude": [
-        "代码",
-        "运营",
-        "提醒"
-      ],
-      "allKeywords": [
-        "安全",
-        "审计",
-        "风险",
-        "检查",
-        "审查",
-        "漏洞"
-      ],
-      "fallback": "zhongguan"
+      "priority": ["security", "audit", "risk", "check"],
+      "exclude": ["code", "ops"],
+      "allKeywords": ["security", "audit", "risk", "check", "review", "vulnerability", "assessment"],
+      "fallback": "zhongguan",
+      "isDefault": false
     },
     "tixing": {
-      "priority": [
-        "提醒",
-        "定时",
-        "闹钟"
-      ],
-      "exclude": [
-        "代码",
-        "安全",
-        "法律"
-      ],
-      "allKeywords": [
-        "提醒",
-        "定时",
-        "闹钟",
-        "通知",
-        "督促",
-        "Cron"
-      ],
-      "fallback": "zhongguan"
+      "priority": ["reminder", "schedule", "alarm", "notification"],
+      "exclude": ["code", "security"],
+      "allKeywords": ["reminder", "schedule", "alarm", "notification", "cron", "progress", "alert"],
+      "fallback": "zhongguan",
+      "isDefault": false
     },
     "zhisguan": {
-      "priority": [
-        "知识",
-        "搜索",
-        "检索"
-      ],
-      "exclude": [
-        "代码",
-        "安全",
-        "文件"
-      ],
-      "allKeywords": [
-        "知识",
-        "搜索",
-        "查找",
-        "文档",
-        "检索",
-        "问答"
-      ],
-      "fallback": "zhongguan"
+      "priority": ["knowledge", "search", "retrieval"],
+      "exclude": ["code", "security", "file"],
+      "allKeywords": ["knowledge", "search", "find", "document", "retrieval", "qa", "semantic", "information"],
+      "fallback": "zhongguan",
+      "isDefault": false
     },
     "wenjian": {
-      "priority": [
-        "文件",
-        "转换",
-        "格式"
-      ],
-      "exclude": [
-        "代码",
-        "安全",
-        "知识"
-      ],
-      "allKeywords": [
-        "文件",
-        "转换",
-        "格式",
-        "图片",
-        "PDF",
-        "文档"
-      ],
-      "fallback": "zhongguan"
+      "priority": ["file", "convert", "format"],
+      "exclude": ["code", "security", "knowledge"],
+      "allKeywords": ["file", "convert", "format", "image", "pdf", "document", "parse", "media", "compress"],
+      "fallback": "zhongguan",
+      "isDefault": false
     },
     "zidonghua": {
-      "priority": [
-        "自动化",
-        "工作流",
-        "Cron"
-      ],
-      "exclude": [
-        "代码",
-        "安全"
-      ],
-      "allKeywords": [
-        "自动化",
-        "工作流",
-        "Cron",
-        "调度",
-        "脚本"
-      ],
-      "fallback": "zhongguan"
+      "priority": ["automation", "workflow", "cron"],
+      "exclude": ["code", "security"],
+      "allKeywords": ["automation", "workflow", "cron", "schedule", "script", "timer", "periodic"],
+      "fallback": "zhongguan",
+      "isDefault": false
     },
     "loudongku": {
-      "priority": [
-        "漏洞",
-        "扫描",
-        "CVE"
-      ],
-      "exclude": [
-        "代码",
-        "运营"
-      ],
-      "allKeywords": [
-        "漏洞",
-        "扫描",
-        "CVE",
-        "渗透",
-        "检测"
-      ],
-      "fallback": "zhongguan"
+      "priority": ["vulnerability", "scan", "cve"],
+      "exclude": ["code", "ops"],
+      "allKeywords": ["vulnerability", "scan", "cve", "penetration", "detection", "security"],
+      "fallback": "zhongguan",
+      "isDefault": false
     },
     "falvhegui": {
-      "priority": [
-        "法律",
-        "合同",
-        "合规"
-      ],
-      "exclude": [
-        "代码",
-        "运营",
-        "安全"
-      ],
-      "allKeywords": [
-        "法律",
-        "合同",
-        "合规",
-        "条款",
-        "协议",
-        "法规"
-      ],
-      "fallback": "zhongguan"
+      "priority": ["legal", "contract", "compliance"],
+      "exclude": ["code", "ops", "security"],
+      "allKeywords": ["legal", "contract", "compliance", "terms", "agreement", "regulation", "review"],
+      "fallback": "zhongguan",
+      "isDefault": false
     }
   },
-  "defaultBot": "zhongguan"
+  "scoring": {
+    "roleMatch": 0.6,
+    "aliasMatch": 0.5,
+    "priorityKeywordMatch": 0.8,
+    "keywordPartialMatch": 0.2,
+    "summaryMatch": 0.3,
+    "skillMatch": 0.2,
+    "taskMatch": 0.1,
+    "excludePenalty": 0
+  }
 }

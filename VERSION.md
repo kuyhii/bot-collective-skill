@@ -127,8 +127,8 @@ bot-collective/
 
 ## 贡献者
 
-- **Author**: kuyhii
-- **GitHub**: https://github.com/kuyhii
+- **Author**: [Your Name]
+- **GitHub**: https://github.com/[YourUsername]
 - **Contributions**: Welcome!
 
 ## 支持渠道
